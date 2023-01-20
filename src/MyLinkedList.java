@@ -74,19 +74,24 @@ public class MyLinkedList {
 
     public Node nthTolast(MyLinkedList mll, int n) {
 
-        Node currentNode = mll.head;
-        Node head2 = new Node();
+        Node p1 = mll.head;
+        Node p2 = mll.head;
+
         int count = 0;
 
-
-        while (currentNode != null) {
-            if (count == n) {
-                System.out.println(currentNode.getValue());
-            }
+        while (p1 != null) {
             count++;
-            currentNode = currentNode.getNext();
+            p1 = p1.getNext();
+            if (count == n) {
+                break;
+            }
         }
 
-        return null;
+        while (p1!=null){
+            p1 = p1.getNext();
+            p2 = p2.getNext();
+        }
+
+        return p2;
     }
 }

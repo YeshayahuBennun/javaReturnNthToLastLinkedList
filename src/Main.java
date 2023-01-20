@@ -3,12 +3,10 @@ public class Main {
         MyLinkedList ll = new MyLinkedList();
         ll.insertNode(1);
         ll.insertNode(2);
+        ll.insertNode(0);
         ll.insertNode(3);
-        ll.insertNode(4);
+        ll.insertNode(5);
         ll.traversalLinkedList();
-
-        ll.nthTolast(ll,3);
-
-
+        System.out.println(ll.nthTolast(ll,5).getValue());
     }
 }
